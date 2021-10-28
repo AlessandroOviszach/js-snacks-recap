@@ -15,6 +15,4 @@ nome_random = nomi[numero_nome_random]
 let numero_cognome_random = Math.floor( Math.random() * (cognomi.length) );
 cognome_random = cognomi[numero_cognome_random]
 
-console.log(nome_random, cognome_random)
-
-
+console.log(nome_random, cognome_random);
