@@ -7,21 +7,19 @@ const btn = document.querySelector('.richiesta_cifre');
 let numero
 btn.addEventListener('click', function(){
     numero = prompt('inserisci un numero di 4 cifre');
-    let somma
-    let media
+    let somma = 0;
+    let media = 0;
 
-    if (numero.length == 4) {
-        const n_1 = numero[0];
-        const n_2 = numero[1];
-        const n_3 = numero[2];
-        const n_4 = numero[3];
-
-        parseInt(n_1, n_2, n_3, n_4);
-
-        somma = n_1 + n_2 + n_3 + n_4;
-        media = somma / numero.length
-        console.log(somma)
-    } else {
-        
+    while (numero.length != 4 || isNaN(numero)) {
+        alert('inserisci 4 cifre');
+        numero = prompt('inserisci un numero di 4 cifre');
     }
+
+    for (let i = 0; i < numero.length; i++) {
+        somma += parseInt(numero[i]);
+    }
+    media = somma / numero.length;
+
+    console.log(somma, media)
 })
+
